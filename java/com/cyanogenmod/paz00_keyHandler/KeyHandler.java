@@ -26,7 +26,7 @@ public final class KeyHandler implements DeviceKeyHandler {
 	}
 
 	@Override
-	public boolean handleKeyEvent(KeyEvent event) {
+	public int handleKeyEvent(KeyEvent event) {
 
 		Log.d(TAG, "KeyEvent: action=" + event.getAction()
 				+ ", flags=" + event.getFlags()
@@ -37,6 +37,6 @@ public final class KeyHandler implements DeviceKeyHandler {
 				+ ", metaState=" + event.getMetaState()
 				+ ", repeatCount=" + event.getRepeatCount());
 
-		return false;
+		return KEYEVENT_UNCAUGHT;
 	}
 }
